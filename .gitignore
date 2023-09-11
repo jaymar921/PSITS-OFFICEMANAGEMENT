@@ -1,3 +1,3 @@
-PSITS_Web.WebAssembly/.vs/
-PSITS_Web.WebAssembly/.vs/*
-PSITS_Web.WebAssembly/bin/
+PSITS_Web.WebAssembly/.vs
+PSITS_Web.WebAssembly/bin
+PSITS_Web.WebAssembly/obj
