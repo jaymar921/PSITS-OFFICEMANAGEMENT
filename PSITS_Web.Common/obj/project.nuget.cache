@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "L09orhAPquSXKQ9uF8fpyoSZzmIdAriXDzPbnVR9usjG4DnpBdxvcNPFAhfCXQxlV3029p1uhnK4d72od6xJ6A==",
+  "dgSpecHash": "yKbxVS6i9WmDM1n3ItNShecxNoWxS1BdC4f+EZawz/IcvEYJYNrWeIoGef8g2i1Vo1eg/7mkX8C69+Mfe2hzFA==",
   "success": true,
   "projectFilePath": "D:\\Work Stuff\\Coding\\OFFICE MANAGEMENT BLAZOR\\PSITS-OFFICEMANAGEMENT\\PSITS_Web.Common\\PSITS_Web.Common.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\6.0.0\\microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.configuration.json\\6.0.0\\microsoft.extensions.configuration.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.configuration.usersecrets\\6.0.1\\microsoft.extensions.configuration.usersecrets.6.0.1.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\6.0.0\\microsoft.extensions.fileproviders.physical.6.0.0.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

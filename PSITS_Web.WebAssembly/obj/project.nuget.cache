@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PkJBnbYHxGz/gy2pkdukzzl4YsWFfP0pzmeDDhd0EYXhyH0uUp0U84PdjI0Sf36Z5TnRll1C1g57NS0usCo69g==",
+  "dgSpecHash": "MIDQdPS34344RgjWDAhpq6eal4JfPGuZczjYA+5rSmnFtFkHPmpzxx+SGBXtpY26bDEvrCHvAG5qb6ZjoCFvVA==",
   "success": true,
   "projectFilePath": "D:\\Work Stuff\\Coding\\OFFICE MANAGEMENT BLAZOR\\PSITS-OFFICEMANAGEMENT\\PSITS_Web.WebAssembly\\PSITS_Web.WebAssembly.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.configuration.binder\\6.0.0\\microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",
     "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\6.0.0\\microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512",
     "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.configuration.json\\6.0.0\\microsoft.extensions.configuration.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.configuration.usersecrets\\6.0.1\\microsoft.extensions.configuration.usersecrets.6.0.1.nupkg.sha512",
     "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\jayha\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",

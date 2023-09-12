@@ -1,5 +1,5 @@
 ﻿@page "/"
-
+@inject IJSRuntime JSRuntime
 <PageTitle>Index</PageTitle>
 
 <h1>Hello, world!</h1>
@@ -8,10 +8,12 @@ Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
-@foreach (var log in officeLogs)
-{
-    <div>
-        <h1>@log.user.firstname</h1>
-        <p>@log.loginTime</p>
-    </div>
+<button @onclick="LoginFunction">Login</button>
+
+@code{
+    private async Task LoginFunction()
+    {
+        //await JSRuntime.InvokeVoidAsync("PSITS_API_Authenticate", "3319695443");
+        await AuthenticationApiService.Authenticate("3319695443");
+    }
 }

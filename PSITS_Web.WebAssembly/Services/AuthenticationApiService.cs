@@ -1,31 +1,39 @@
-﻿using System.Net;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
+using PSITS_Web.Common.Auth;
+using PSITS_Web.WebAssembly.Classes;
+using System.Net;
 using System.Text;
+using System.Text.Json;
 
 namespace PSITS_Web.WebAssembly.Services
 {
     public class AuthenticationApiService
     {
-        private readonly HttpClient httpClient;
+        private readonly IJSRuntime JSRuntime;
 
-        public AuthenticationApiService(HttpClient httpClient)
+        public AuthenticationApiService(IJSRuntime jSRuntime)
         {
-            this.httpClient = httpClient;
+            this.JSRuntime = jSRuntime;
         }
 
-        public async Task Authenticate()
+        public async Task Authenticate(string rfid, string? password = null)
         {
-            var cookies = new CookieContainer();
-            HttpRequestMessage requestMessage = new HttpRequestMessage(HttpMethod.Post, "auth/login/rfid");
+            /*
             var content = new StringContent("{\"rfid\":\"3319695443\"}", Encoding.UTF8, "application/json");
+
             var response = await httpClient.PostAsync("auth/login/rfid", content);
+            response.EnsureSuccessStatusCode();
 
-            Uri uri = new Uri(httpClient.BaseAddress?.ToString());
-            IEnumerable<Cookie> responseCookies = cookies.GetCookies(uri).Cast < Cookie > ();
+            var serializedAuth = JsonSerializer.DeserializeAsync<Authentication>(await response.Content.ReadAsStreamAsync(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-            foreach(Cookie cookie in responseCookies)
-            {
-                Console.WriteLine(cookie.Name + ": " + cookie.Value);
-            }
+            Authentication auth = serializedAuth.Result ?? new();
+
+            //await _cookie.SetValue("token", auth.Token);
+            */
+            
+            await JSRuntime.InvokeVoidAsync("PSITS_API_Authenticate", rfid, password);
         }
     }
 }

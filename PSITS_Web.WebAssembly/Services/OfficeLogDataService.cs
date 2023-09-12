@@ -1,4 +1,7 @@
-﻿using PSITS_Web.Common;
+﻿using Microsoft.AspNetCore.Components.WebAssembly.Http;
+using Microsoft.JSInterop;
+using PSITS_Web.Common;
+using PSITS_Web.WebAssembly.Classes;
 using System.Globalization;
 using System.Text.Json;
 
@@ -6,11 +9,10 @@ namespace PSITS_Web.WebAssembly.Services
 {
     public class OfficeLogDataService : IOfficeLogDataService
     {
-        private readonly HttpClient _httpClient;
-
-        public OfficeLogDataService(HttpClient httpClient)
+        private readonly IJSRuntime JSRuntime;
+        public OfficeLogDataService(IJSRuntime JSRuntime)
         {
-            _httpClient = httpClient;
+            this.JSRuntime = JSRuntime;
         }
 
         public Task CloseOfficeLog(string userId)
@@ -18,14 +20,9 @@ namespace PSITS_Web.WebAssembly.Services
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<OfficeLog>> GetAllOfficeLogs(DateTime min = default, DateTime max = default)
+        public Task<IEnumerable<OfficeLog>> GetAllOfficeLogs(DateTime min = default, DateTime max = default)
         {
-            _httpClient.DefaultRequestHeaders.Add("min", min.ToString("o", CultureInfo.InvariantCulture));
-            _httpClient.DefaultRequestHeaders.Add("max", max.ToString("o", CultureInfo.InvariantCulture));
-            
-            var data = await JsonSerializer.DeserializeAsync<IEnumerable<OfficeLog>>(await _httpClient.GetStreamAsync($"officelog"),
-                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-            return data ?? new List<OfficeLog> { };
+            throw new NotImplementedException();
         }
 
         public Task OpenOfficeLogs(string userId)
