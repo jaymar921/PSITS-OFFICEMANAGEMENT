@@ -16,5 +16,10 @@
         public bool graduated { get; set; } = false;
         public bool isAdmin { get; set; } = false;
         public bool showPublic { get; set; } = false;
+
+        public override string ToString()
+        {
+            return $"avatar: {avatar}\nuserId: {userId}\nrfid: {rfid}\n...";
+        }
     }
 }
