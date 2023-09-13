@@ -10,7 +10,7 @@ namespace PSITS_Web.WebAssembly.Services
         /// <param name="min"></param>
         /// <param name="max"></param>
         /// <returns></returns>
-        public Task<IEnumerable<OfficeLog>> GetAllOfficeLogs(DateTime min = new (), DateTime max = new ());
+        public Task<OfficeLogs> GetAllOfficeLogs(string option = "", DateTime min = new (), DateTime max = new ());
 
         /// <summary>
         /// Logs-in the User when it's not logged yet.
@@ -21,7 +21,7 @@ namespace PSITS_Web.WebAssembly.Services
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public Task OpenOfficeLogs(string userId);
+        public Task OpenOfficeLogs();
 
         /// <summary>
         /// Logs-out the User when it's not logged off yet.
@@ -32,6 +32,6 @@ namespace PSITS_Web.WebAssembly.Services
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public Task CloseOfficeLog(string userId);
+        public Task CloseOfficeLog();
     }
 }
