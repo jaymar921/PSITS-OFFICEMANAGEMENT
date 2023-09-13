@@ -15,23 +15,21 @@ namespace PSITS_Web.WebAssembly.Services
         /// <summary>
         /// Logs-in the User when it's not logged yet.
         /// 
-        /// Accepts a userId and will be send in the API for validation,
+        /// Accepts a reason and will be sent in the API for validation,
         /// Cookie Credentials must also be present when using this request.
         /// Therefor, the user must be Authenticated first.
         /// </summary>
-        /// <param name="userId"></param>
+        /// <param name="reason"></param>
         /// <returns></returns>
-        public Task OpenOfficeLogs();
+        public Task<int> OpenOfficeLogs(string reason);
 
         /// <summary>
         /// Logs-out the User when it's not logged off yet.
         /// 
-        /// Accepts a userId and will be sent in the API for validation.
         /// Cookie Credentials must also be present when using this request.
         /// Therefor the user must be Authenticated first.
         /// </summary>
-        /// <param name="userId"></param>
         /// <returns></returns>
-        public Task CloseOfficeLog();
+        public Task<int> CloseOfficeLog();
     }
 }
