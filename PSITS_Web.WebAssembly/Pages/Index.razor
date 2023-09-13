@@ -9,11 +9,29 @@ Welcome to your new app.
 <SurveyPrompt Title="How is Blazor working for you?" />
 
 <button @onclick="LoginFunction">Login</button>
+<button @onclick="LoadData">Load Data</button>
+<button @onclick="LogUser">LoginUser</button>
+<button @onclick="LogOff">LogoutUser</button>
 
 @code{
     private async Task LoginFunction()
     {
-        //await JSRuntime.InvokeVoidAsync("PSITS_API_Authenticate", "3319695443");
         await AuthenticationApiService.Authenticate("3319695443");
+    }
+
+    private async Task LoadData()
+    {
+        await DataService.GetAllOfficeLogs();
+    }
+
+    private async Task LogUser()
+    {
+        await DataService.OpenOfficeLogs("ATTENDANCE");
+        
+    }
+
+    private async Task LogOff()
+    {
+        await DataService.CloseOfficeLog();
     }
 }

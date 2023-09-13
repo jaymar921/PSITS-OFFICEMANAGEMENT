@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Components.WebAssembly.Http;
-using Microsoft.JSInterop;
+﻿using Microsoft.JSInterop;
 using PSITS_Web.Common;
-using PSITS_Web.WebAssembly.Classes;
-using System.Globalization;
-using System.Text.Json;
 
 namespace PSITS_Web.WebAssembly.Services
 {
@@ -15,19 +11,20 @@ namespace PSITS_Web.WebAssembly.Services
             this.JSRuntime = JSRuntime;
         }
 
-        public Task CloseOfficeLog(string userId)
+        public async Task<int> CloseOfficeLog()
         {
-            throw new NotImplementedException();
+            return await JSRuntime.InvokeAsync<int>("PSITS_API_OfficeLogOff");
         }
 
-        public Task<IEnumerable<OfficeLog>> GetAllOfficeLogs(DateTime min = default, DateTime max = default)
+        public async Task<OfficeLogs> GetAllOfficeLogs(string option = "", DateTime min = default, DateTime max = default)
         {
-            throw new NotImplementedException();
+            var data = await JSRuntime.InvokeAsync<OfficeLogs>("PSITS_API_GetAllOfficeLogs", option, min, max);
+            return data ?? new();
         }
 
-        public Task OpenOfficeLogs(string userId)
+        public async Task<int> OpenOfficeLogs(string reason)
         {
-            throw new NotImplementedException();
+            return await JSRuntime.InvokeAsync<int>("PSITS_API_OfficeLogIn", reason);
         }
     }
 }
