@@ -20,16 +20,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/Components/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xIZWFkZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+[D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/Components/WarningCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xXYXJuaW5nQ2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/LoginPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Shared/SurveyPrompt.razor]

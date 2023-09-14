@@ -62,3 +62,45 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+#chk:checked ~ .register {
+    transform: translateY(-5%);
+}
+
+#chk:checked ~ .register label {
+    transform: scale(1);
+    margin: 10% 0 5%;
+}
+
+
+#chk:checked ~ .loginLabel {
+    font-size: 1rem;
+    transform: scale(0.2);
+    margin: 5% 0 5%;
+}
+
+#chk {
+    display: none;
+}
+
+.register {
+    transition: .8s ease-in-out;
+}
+
+.rform button {
+    width: 85%;
+    height: 40px;
+    margin: 12px auto 10%;
+    color: #fff;
+    background: #05304D;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+    .rform button:hover {
+        background-color: #063D61;
+    }
