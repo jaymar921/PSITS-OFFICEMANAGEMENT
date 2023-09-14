@@ -27,6 +27,21 @@ async function PSITS_API_Authenticate(rfid, password = undefined) {
     return data;
 }
 
+async function PSITS_API_ValidateAuthentication() {
+    const res = await fetch(api_globals.api_link + "user/current-user", { method: "GET", credentials: "include" });
+    return res.status;
+}
+
+async function PSITS_API_GetCurrentUser() {
+    const res = await fetch(api_globals.api_link + "user/current-user", { method: "GET", credentials: "include" });
+    const { user } = await res.json();
+    return user;
+}
+
+
+async function PSITS_API_Logout() {
+    await fetch(api_globals.api_link + "auth/logout", { method: "POST", credentials: "include" });
+}
 
 async function PSITS_API_GetAllOfficeLogs(option, min = new Date(new Date().setHours(0, 0, 0, 0)).toISOString(), max = new Date().toISOString()) {
     const objHeader = {

@@ -12,11 +12,19 @@ Welcome to your new app.
 <button @onclick="LoadData">Load Data</button>
 <button @onclick="LogUser">LoginUser</button>
 <button @onclick="LogOff">LogoutUser</button>
+<button @onclick="IsAuthenticated">Check Authenticated</button>
+<button @onclick="GetCurrentUser">Get Current User</button>
+<button @onclick="Logout">Logout</button>
 
 @code{
     private async Task LoginFunction()
     {
         await AuthenticationApiService.Authenticate("3319695443");
+    }
+
+    private async Task Logout()
+    {
+        await AuthenticationApiService.Logout();
     }
 
     private async Task LoadData()
@@ -27,11 +35,21 @@ Welcome to your new app.
     private async Task LogUser()
     {
         await DataService.OpenOfficeLogs("ATTENDANCE");
-        
+
     }
 
     private async Task LogOff()
     {
         await DataService.CloseOfficeLog();
+    }
+
+    private async Task IsAuthenticated()
+    {
+        bool res = await AuthenticationApiService.IsAuthenticated();
+    }
+
+    private async Task GetCurrentUser()
+    {
+        var data = await AuthenticationApiService.GetCurrentUser();
     }
 }
