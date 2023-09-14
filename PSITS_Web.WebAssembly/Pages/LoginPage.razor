@@ -1,0 +1,93 @@
+﻿@page "/login"
+@inject NavigationManager NavigationManager
+@inject AuthenticationApiService AuthenticationService
+@inject IJSRuntime JSRuntime
+
+<div class="relative w-[100%] h-[85vh]">
+	<div class="relative flex flex-col bg-[#074873] w-[270px] max-h-[420px] rounded-xl overflow-hidden shadow-xl shadow-slate-200 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+		<div class="relative w-[100%] h-[100px]">
+			<form class="rform flex flex-column gap-[14px] p-[24px] ease-in-out duration-800">
+				<label class="loginLabel mt-[25px] mb-[5px] text-white justify-center flex font-bold cursor-pointer ease-in duration-500 text-[2rem] " for="chk" aria-hidden="true">Log in</label>
+				<input class="w-[100%] h-[40px] bg-[#e0dede] p-[10px] border-none outline-none rounded" type="text" @bind-value=@rfid @oninput=@ClearWarningCard placeholder="RFID Code" required="">
+				<input class="w-[100%] h-[40px] bg-[#e0dede] p-[10px] border-none outline-none rounded" type="password" @bind-value=@password @oninput=@ClearWarningCard placeholder="Password" required="">
+				<button type="button" @onclick="AuthenticateUser">Log in</button>
+			</form>
+		</div>
+
+		<div class="bg-[#eee] rounded-[60%/10%] translate-y-[70%] ease-in-out duration-800 register">
+			<form class="rform flex flex-column gap-[14px] p-[24px]">
+				<label for="chk" class="text-[#05304D] text-[2rem] justify-center flex font-bold cursor-pointer ease-in duration-500 scale-[0.7]" aria-hidden="true">Register</label>
+				<p class="justify-center ">Sorry but only admin's are allowed to access this page. You can still register at the official website of PSITS UC-Main by clicking the button below</p>
+				<button type="button" @onclick="redirectToOfficialPSITSWebsite">Register</button>
+			</form>
+		</div>
+	</div>
+	<WarningCard/>
+</div>
+
+@code {
+	private string rfid = "";
+	private string password = "";
+
+
+	private async Task AuthenticateUser()
+	{
+		// validate fields
+		if (!ValidateFields()) return;
+		// clear the cookie first
+		await AuthenticationService.Logout();
+		// login the user
+		await AuthenticationService.Authenticate(rfid, password);
+		// check if user was authenticated
+		bool isAuthenticated = await AuthenticationService.IsAuthenticated();
+
+		if (!isAuthenticated)
+		{
+			SetWarning("Invalid Credentials", true);
+			return;
+		}
+		// navigate back to Index / Dashboard
+		NavigationManager.NavigateTo("/");
+	}
+
+	private void ClearWarningCard()
+	{
+		SetWarning("", false);
+	}
+
+	private void redirectToOfficialPSITSWebsite()
+	{
+		// just like 'location.href' in JS
+		NavigationManager.NavigateTo("https://psits-web-site.vercel.app/register");
+	}
+
+	private bool ValidateFields()
+	{
+		if (password.Length <= 5)
+		{
+			SetWarning("Password Length must be at least 6 characters", true);
+			return false;
+		}
+		if (rfid.Length <= 4)
+		{
+			SetWarning("RFID Length must be at least 5 characters", true);
+			return false;
+		}
+		return true;
+	}
+
+	private void SetWarning(string message, bool show)
+	{
+		if (show)
+		{
+			JSRuntime.InvokeVoidAsync("eval", $"document.getElementById('warning-div').style.display = 'block'");
+		}
+		else
+		{
+			JSRuntime.InvokeVoidAsync("eval", $"document.getElementById('warning-div').style.display = 'none'");
+		}
+		JSRuntime.InvokeVoidAsync("eval", $"document.getElementById('warning-message').innerHTML = '{message}'");
+	}
+}

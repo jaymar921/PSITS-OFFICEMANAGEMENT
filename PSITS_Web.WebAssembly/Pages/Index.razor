@@ -1,0 +1,55 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<button @onclick="LoginFunction">Login</button>
+<button @onclick="LoadData">Load Data</button>
+<button @onclick="LogUser">LoginUser</button>
+<button @onclick="LogOff">LogoutUser</button>
+<button @onclick="IsAuthenticated">Check Authenticated</button>
+<button @onclick="GetCurrentUser">Get Current User</button>
+<button @onclick="Logout">Logout</button>
+
+@code{
+    private async Task LoginFunction()
+    {
+        await AuthenticationApiService.Authenticate("3319695443");
+    }
+
+    private async Task Logout()
+    {
+        await AuthenticationApiService.Logout();
+    }
+
+    private async Task LoadData()
+    {
+        await DataService.GetAllOfficeLogs();
+    }
+
+    private async Task LogUser()
+    {
+        await DataService.OpenOfficeLogs("ATTENDANCE");
+
+    }
+
+    private async Task LogOff()
+    {
+        await DataService.CloseOfficeLog();
+    }
+
+    private async Task IsAuthenticated()
+    {
+        bool res = await AuthenticationApiService.IsAuthenticated();
+    }
+
+    private async Task GetCurrentUser()
+    {
+        var data = await AuthenticationApiService.GetCurrentUser();
+    }
+}

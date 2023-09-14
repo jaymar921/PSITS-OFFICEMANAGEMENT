@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSITS_Web.WebAssembly", "PSITS_Web.WebAssembly.csproj", "{D42AD61A-09F5-4766-A837-921516AC2CA3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E0F3C72C-E7A4-4853-96EC-A8553A8D1E85} = {E0F3C72C-E7A4-4853-96EC-A8553A8D1E85}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSITS_Web.Common", "..\PSITS_Web.Common\PSITS_Web.Common.csproj", "{E0F3C72C-E7A4-4853-96EC-A8553A8D1E85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D42AD61A-09F5-4766-A837-921516AC2CA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42AD61A-09F5-4766-A837-921516AC2CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42AD61A-09F5-4766-A837-921516AC2CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42AD61A-09F5-4766-A837-921516AC2CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F3C72C-E7A4-4853-96EC-A8553A8D1E85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0F3C72C-E7A4-4853-96EC-A8553A8D1E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0F3C72C-E7A4-4853-96EC-A8553A8D1E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0F3C72C-E7A4-4853-96EC-A8553A8D1E85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {717B6D77-BDBF-4CD5-B4AB-D6495EE5017A}
+	EndGlobalSection
+EndGlobal

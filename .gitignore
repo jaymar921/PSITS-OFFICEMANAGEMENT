@@ -1,0 +1,11 @@
+PSITS_Web.WebAssembly/.vs
+PSITS_Web.WebAssembly/bin
+PSITS_Web.WebAssembly/obj
+PSITS_Web.WebAssembly/obj/
+PSITS_Web.WebAssembly/obj/*
+PSITS_Web.WebAssembly/obj/**
+PSITS_Web.Common/.vs
+PSITS_Web.Common/bin
+PSITS_Web.Common/obj
+PSITS_Web.Common/obj/
+PSITS_Web.Common/obj/*

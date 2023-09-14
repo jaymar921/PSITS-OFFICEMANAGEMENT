@@ -1,0 +1,39 @@
+﻿<div class="absolute bottom-[20px] left-[20px] hidden" id="warning-div">
+    <div class="w-[fit-content] p-2 px-3 bg-[#B33A3A] rounded-1 text-white font-semibold">
+        <p id="warning-message" class="text-[12px] md:text-lg">⚠ @Message</p>
+    </div>
+</div>
+
+@code{
+    private string className = "";
+    private string message = "";
+
+    [Parameter]
+    public string Message
+    {
+        get => message;
+        set
+        {
+            if (message == value) return;
+            message = value;
+            MessageChanged.InvokeAsync(value);
+        }
+    }
+
+    [Parameter]
+    public string ClassName
+    {
+        get => className;
+        set
+        {
+            if (className == value) return;
+            className = value;
+            ClassNameChanged.InvokeAsync(value);
+        }
+    }
+
+    [Parameter]
+    public EventCallback<string> MessageChanged { get; set; }
+    [Parameter]
+    public EventCallback<string> ClassNameChanged { get; set; }
+}
