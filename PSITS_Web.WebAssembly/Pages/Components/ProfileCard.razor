@@ -1,0 +1,61 @@
+﻿
+<div class="relative block w-[230px] h-[230px] border-2 border-black-900 bg-[#fff] left-[50%] translate-x-[-50%] mt-[20px] rounded-[12px] text-center">
+    <h1 class="text-lg font-bold p-2">@CardTitle</h1>
+    <div class="relative w-[100%]">
+        <img class="relative w-[64px] rounded-[50%] left-[50%] translate-x-[-50%]"
+             src="https://avatars.githubusercontent.com/u/72720429?v=4" />
+        <p class="text-sm pt-2 pb-0 font-bold text-blue-800">
+            @_user.firstname @_user.lastname
+        </p>
+        <p class="relative top-[-2px] text-[13px] font-bold">@_user.course @_user.year</p>
+        @if (showButton)
+        {
+            <Button ClassName="@ButtonClassName" OnButtonClicked="@OnButtonClicked">@ButtonContent</Button>
+        }
+    </div>
+</div>
+
+@code {
+    private User _user = new();
+    private bool showButton = false;
+
+    [Parameter]
+    public string CardTitle { get; set; } = string.Empty;
+    [Parameter]
+    public string ButtonClassName { get; set; } = string.Empty;
+    [Parameter]
+    public string ButtonContent { get; set; } = string.Empty;
+    [Parameter]
+    public EventCallback OnButtonClicked { get; set; }
+
+    [Parameter] 
+    public User User
+    {
+        get => _user;
+        set
+        {
+            if (value == _user)
+                return;
+            _user = value;
+            UserChange.InvokeAsync(_user);
+        }
+    }
+
+    [Parameter]
+    public EventCallback<User> UserChange { get; set; }
+
+    [Parameter]
+    public bool ShowButton { 
+        get => showButton;
+        set
+        {
+            if (showButton == value)
+                return;
+            showButton = value;
+            ShowButtonChange.InvokeAsync(showButton);
+        }
+    }
+
+    [Parameter]
+    public EventCallback<bool> ShowButtonChange { get; set; }
+}
