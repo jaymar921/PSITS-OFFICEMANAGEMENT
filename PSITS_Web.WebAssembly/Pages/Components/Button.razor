@@ -1,0 +1,12 @@
+﻿<button @onclick=OnButtonClicked class="@ClassName">@ChildContent</button>
+
+@code {
+    [Parameter]
+    public string ClassName { get; set; } = string.Empty;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public EventCallback OnButtonClicked { get; set; }
+}
