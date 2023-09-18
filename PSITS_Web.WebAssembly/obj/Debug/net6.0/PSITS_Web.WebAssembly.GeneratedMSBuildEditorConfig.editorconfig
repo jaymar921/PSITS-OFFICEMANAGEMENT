@@ -20,8 +20,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/Components/Button.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xCdXR0b24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/Components/Header.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xIZWFkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/Components/ProfileCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xQcm9maWxlQ2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/Components/WarningCard.razor]
