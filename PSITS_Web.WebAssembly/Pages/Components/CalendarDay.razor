@@ -1,0 +1,19 @@
+﻿<div class="relative min-w-[50px] lg:min-w-[100px] h-[50px] md:h-[100px] border-gray-100 border-1">
+    <div class="flex p-2 md:p-2 sm:p-1">
+        <div class="w-[50%] text-left text-[0.5rem] md:text-[0.8rem] lg:text-[1rem] text-gray-400 font-bold">@Date</div>
+        <div class="w-[50%] text-right text-[0.5rem] md:text-[0.8rem] lg:text-[1rem] text-gray-400 font-bold">@Day</div>
+    </div>
+    <div class="text-center">@ChildContent</div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; } = null;
+
+    [Parameter]
+    public string Day { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Date { get; set; } = string.Empty;
+
+}

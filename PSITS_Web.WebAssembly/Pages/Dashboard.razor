@@ -1,6 +1,6 @@
 ﻿@page "/"
-<div class="relative block w-[100%] h-[100%] md:flex">
-    <div class="relative block min-w-[250px] w-[100%] md:w-[20%] h-[fit-content] md:h-[100%] border-2 border-blue-900 pb-[200px] md:pb-1">
+<div class="relative block w-full h-full md:flex">
+    <div class="relative min-w-[250px] w-[100%] md:w-[20%] h-[fit-content] md:h-[100%] pb-[200px] md:pb-1">
         <!-- Profile Card -->
         <ProfileCard 
             CardTitle="Hello Admin" 
@@ -11,7 +11,8 @@
             OnButtonClicked="@LogoutAsync" />
         <!-- End of Profile Card --> 
     </div>
-    <div class="relative block w-[100%] md:w-[80%] h-[100%] border-2 border-blue-900">
+    <div class="relative w-full md:w-[80%] h-full">
+        <Calendar />
     </div>
 </div>
 
