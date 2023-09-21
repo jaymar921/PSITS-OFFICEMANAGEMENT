@@ -1,4 +1,5 @@
-﻿<div class="relative p-3 md:p-5">
+﻿@using Csharp_Deconstructing_Tuples.Classes;
+<div class="relative p-3 md:p-5">
     <h1 class="font-bold text-[1.2rem] md:text-[1.8rem]">Calendar</h1>
     <h1 class="font-bold text-[0.8rem] md:text-[1.3rem] text-center p-2 text-gray-500">@Month @Year</h1>
     <div class="grid grid-cols-7 gap-0 min-w-[350px] xl:min-w-[700px] border-2 rounded-[10px] overflow-hidden shadow-md lg:shadow-xl">
@@ -6,7 +7,8 @@
         {
             if (startingPosition <= i && (startingPosition + endDate) > i)
             {
-                <CalendarDay Date="@currentDate.ToString()" Day=@CalendarUtils.GetDay(dayPosition)></CalendarDay>
+                DateTime _logDate = GenerateDate(currentDate);
+                <CalendarDay Date="@currentDate.ToString()" Day=@CalendarUtils.GetDay(dayPosition)><CalendarLog Day=@currentDate CurrentDayLogs=@OfficeLogs.GetLogs(_logDate) /></CalendarDay>
                 currentDate++;
             }
             else
@@ -20,24 +22,54 @@
 </div>
 
 @code {
+    [Parameter]
+    public DateTime Date { get; set; } = DateTime.Now;
+
+    [Parameter]
+    public OfficeLogs OfficeLogs { get; set; } = new();
+
     private int startingPosition = 1;
     private int endDate = 31;
     private int currentDate = 1;
     private int dayPosition = 7;
     private int maxCalendarDays = 35;
-    private DateTime Date;
+    //private DateTime Date;
     private string Month = "";
     private int Year = 0;
+    //private OfficeLogs OfficeLogs = new();
 
-    protected override async Task OnInitializedAsync()
+
+    protected override void OnInitialized()
     {
-        Date = DateTime.Now;
+        LoadProperties();
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        LoadProperties();
+    }
+
+    private void LoadProperties()
+    {
         startingPosition = CalendarUtils.GetDayOfWeek(Date);
         endDate = CalendarUtils.GetNumberOfDaysInMonth(Date.Year, Date.Month);
+        maxCalendarDays = 35;
         if (startingPosition > 5 && endDate > 30)
             maxCalendarDays = 42;
         Month = Date.ToString("MMMM");
         Year = Date.Year;
+    }
+
+    private DateTime GenerateDate(int day)
+    {
+        try
+        {
+            return new DateTime(Date.Year, Date.Month, day);
+        }
+        catch
+        {
+            return DateTime.Now;
+        }
     }
 
 }
