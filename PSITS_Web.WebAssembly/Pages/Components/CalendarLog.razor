@@ -1,0 +1,47 @@
+﻿<div class="w-full p-1 max-h-[100px] overflow-hidden">
+    <div class="grid grid-cols-3 place-items-center text-center w-full">
+        @foreach(string imageSource in Images)
+        {
+            <img class="w-[8px] h-[8px] md:w-[16px] md:h-[16px] lg:w-[32px] lg:h-[32px] rounded-[50%]" src=@imageSource />
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public OfficeLogs CurrentDayLogs { get; set; } = new();
+
+    [Parameter]
+    public int Day { get; set; } = 1;
+
+    private List<string> Images = new List<string>();
+
+    protected override void OnInitialized()
+    {
+        LoadImages();
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        LoadImages();
+    }
+
+    private void LoadImages()
+    {
+        Images.Clear();
+        foreach (OfficeLog log in CurrentDayLogs.officeLogs)
+        {
+            LoadUniqueImages(log.user.avatar);
+        }
+    }
+
+    private void LoadUniqueImages(string imgSrc)
+    {
+        if (Images.Contains(imgSrc))
+            return;
+        if (Images.Count >= 3)
+            return;
+        Images.Add(imgSrc);
+    }
+
+}
