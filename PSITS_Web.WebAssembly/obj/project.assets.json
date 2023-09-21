@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Jaymar.CSharp.UseState/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Jaymar.CSharp.UseState.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Jaymar.CSharp.UseState.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/6.0.13": {
         "type": "package",
         "dependencies": {
@@ -544,6 +553,15 @@
       }
     },
     "net6.0/browser-wasm": {
+      "Jaymar.CSharp.UseState/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Jaymar.CSharp.UseState.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Jaymar.CSharp.UseState.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/6.0.13": {
         "type": "package",
         "dependencies": {
@@ -1081,6 +1099,18 @@
     }
   },
   "libraries": {
+    "Jaymar.CSharp.UseState/1.0.0": {
+      "sha512": "SeiHAS0flZ0uTeoGfKEkFe+bIhnZfJeRxoKRDUBSPiW4BCYJUAIHl9OB63IK48ordKmqokjNTlOw3dotXHpVEg==",
+      "type": "package",
+      "path": "jaymar.csharp.usestate/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jaymar.csharp.usestate.1.0.0.nupkg.sha512",
+        "jaymar.csharp.usestate.nuspec",
+        "lib/net6.0/Jaymar.CSharp.UseState.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/6.0.13": {
       "sha512": "voJUi8+ccHoLb+N2+KPk0YgipRYoUlqo4AsJgz3cb0NfVq+LiGUHHzzXTOk3WdPflSYwR/VUGLBGACuuaLFsSQ==",
       "type": "package",
@@ -1915,6 +1945,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Jaymar.CSharp.UseState >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.13",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.13",
       "Microsoft.Extensions.Http >= 7.0.0",
@@ -1970,6 +2001,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Jaymar.CSharp.UseState": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[6.0.13, )"

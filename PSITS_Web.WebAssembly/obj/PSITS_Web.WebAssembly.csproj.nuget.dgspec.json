@@ -115,6 +115,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Jaymar.CSharp.UseState": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[6.0.13, )"

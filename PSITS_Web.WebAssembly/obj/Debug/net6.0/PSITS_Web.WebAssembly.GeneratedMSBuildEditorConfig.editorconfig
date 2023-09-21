@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xDYWxlbmRhckRheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/Components/CalendarLog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xDYWxlbmRhckxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Work Stuff/Coding/OFFICE MANAGEMENT BLAZOR/PSITS-OFFICEMANAGEMENT/PSITS_Web.WebAssembly/Pages/Components/Header.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xIZWFkZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MIDQdPS34344RgjWDAhpq6eal4JfPGuZczjYA+5rSmnFtFkHPmpzxx+SGBXtpY26bDEvrCHvAG5qb6ZjoCFvVA==",
+  "dgSpecHash": "LBR61tOrJIHSVFWEZal4Xk83bCImTtls19h25rdsbv2wTT+EgKNJX/MT4LacLFlboEH0zS3qJ+8lEdmZ/7j0iw==",
   "success": true,
   "projectFilePath": "D:\\Work Stuff\\Coding\\OFFICE MANAGEMENT BLAZOR\\PSITS-OFFICEMANAGEMENT\\PSITS_Web.WebAssembly\\PSITS_Web.WebAssembly.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jayha\\.nuget\\packages\\jaymar.csharp.usestate\\1.0.0\\jaymar.csharp.usestate.1.0.0.nupkg.sha512",
     "C:\\Users\\jayha\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.13\\microsoft.aspnetcore.authorization.6.0.13.nupkg.sha512",
     "C:\\Users\\jayha\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.13\\microsoft.aspnetcore.components.6.0.13.nupkg.sha512",
     "C:\\Users\\jayha\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.13\\microsoft.aspnetcore.components.analyzers.6.0.13.nupkg.sha512",

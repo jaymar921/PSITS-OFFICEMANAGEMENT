@@ -12,7 +12,11 @@
         <!-- End of Profile Card --> 
     </div>
     <div class="relative w-full md:w-[80%] h-full">
-        <Calendar />
+        <div>
+            <Button OnButtonClicked="PreviousMonth" ClassName="p-2 m-2 bg-blue-100 rounded-[10px]">Back</Button>
+            <Button OnButtonClicked="NextMonth" ClassName="p-2 m-2 bg-blue-100 rounded-[10px]">Next</Button>
+        </div>
+        <Calendar Date="@Date" OfficeLogs="@OfficeLogs"/>
     </div>
 </div>
 
@@ -23,5 +27,35 @@
         await AuthenticationApiService.Logout();
 
         NavigationManager.NavigateTo("/login");
+    }
+
+    private async Task NextMonth()
+    {
+        try
+        {
+            Date = new DateTime(Date.Year, Date.Month + 1, Date.Day);
+        }catch
+        {
+            Date = new DateTime(Date.Year+1, 1, Date.Day);
+        }
+        Console.WriteLine("Next... " + Date);
+        StateHasChanged();
+        await LoadOfficeLogs();
+    }
+
+    private async Task PreviousMonth()
+    {
+        try
+        {
+            Date = new DateTime(Date.Year, Date.Month - 1, Date.Day);
+        }
+        catch
+        {
+            Date = new DateTime(Date.Year - 1, 12, Date.Day);
+        }
+        
+        Console.WriteLine("Previous..." + Date);
+        StateHasChanged();
+        await LoadOfficeLogs();
     }
 }
